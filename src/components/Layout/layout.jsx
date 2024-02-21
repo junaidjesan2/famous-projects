@@ -3,9 +3,11 @@ import Header from "../Shared/Header";
 
 export default function Layout() {
   return (
-    <div>
+    <div className="w-3/4 mx-auto">
       <Header />
-      <Outlet />
+      <div className="px-10 mx-auto">
+        <Outlet />
+      </div>
     </div>
   );
 }

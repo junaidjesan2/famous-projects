@@ -24,22 +24,22 @@ export default function RendomColor() {
   }
   return (
     <div className="h-screen py-5" style={{ background: randomColor }}>
-      <div className="w-2/4 mx-auto">
+      <div className="w-2/4 mx-auto bg-slate-200">
         <button
-          className="py-1 px-3 bg-slate-400 rounded-xl mr-3"
+          className="py-1 px-3 hover:underline mr-3"
           onClick={() => setColorType("rgb")}
         >
           RGB
         </button>
         <button
-          className="py-1 px-3 bg-slate-400 rounded-xl mr-3"
+          className="py-1 px-3 hover:underline mr-3"
           onClick={() => setColorType("hex")}
         >
           HEX
         </button>
         <button
           onClick={colorType === "hex" ? generateHex : generateRbg}
-          className="py-1 px-3 bg-slate-400 rounded-xl mr-3"
+          className="py-1 px-3 hover:underline mr-3"
         >
           Generate random color
         </button>

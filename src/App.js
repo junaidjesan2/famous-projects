@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 import Layout from "./components/Layout/layout";
-import Demo from "./components/Pages/demo/demo";
 import RendomColor from "./components/Pages/rendomColor/rendomColor";
+import Rating from "./components/Pages/rating/rating";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
         element: <RendomColor />,
       },
       {
-        path: "/demo",
-        element: <Demo />,
+        path: "/rating",
+        element: <Rating />,
       },
     ],
   },
