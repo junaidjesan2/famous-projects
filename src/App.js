@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout/layout";
 import RendomColor from "./components/Pages/rendomColor/rendomColor";
 import Rating from "./components/Pages/rating/rating";
-import LoadData from "./components/Pages/LoadData/loadData";
+import LoadData from "./components/Pages/loadData/loadData";
 
 const router = createBrowserRouter([
   {
