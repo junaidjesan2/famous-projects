@@ -31,6 +31,9 @@ export default function Header() {
             <Link className="py-2 px-4 text-center hover:underline " to="/load">
               Load Data
             </Link>
+            <Link className="py-2 px-4 text-center hover:underline " to="/qr">
+              QR Generator
+            </Link>
           </div>
         )}
       </div>
