@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function LoadData(title) {
+export default function LoadData() {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
@@ -31,20 +31,26 @@ export default function LoadData(title) {
     return <div>Data Loading ...</div>;
   }
   return (
-    <div className="my-16">
-        <p className="w-2/3 font-bold text-2xl text-center mx-auto">{title}</p>
+    <div className="py-16">
       <div className="grid grid-cols-3 gap-3 drop-shadow-md">
         {products && products.length
           ? products.map((item) => (
               <div className="product" key={item.id}>
-                <img className="h-28 bg-cover w-full" src={item.thumbnail} alt={item.title} />
+                <img
+                  className="h-28 bg-cover w-full"
+                  src={item.thumbnail}
+                  alt={item.title}
+                />
                 <p>{item.title}</p>
               </div>
             ))
           : null}
       </div>
       <div>
-        <button className=" bg-amber-200 px-4 py-1 my-5 w-2/5 rounded-md font-semibold" onClick={() => setCount(count + 1)}>
+        <button
+          className=" bg-amber-200 px-4 py-1 my-5 w-2/5 rounded-md font-semibold"
+          onClick={() => setCount(count + 1)}
+        >
           Load More Products
         </button>
         {/* {disableButton ? <p>You have reached to 100 products</p> : null} */}

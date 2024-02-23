@@ -1,11 +1,35 @@
 import { Link } from "react-router-dom";
 
+import { CiMenuFries } from "react-icons/ci";
+import { useState } from "react";
+
 export default function Header() {
+  const [openModal, setOpenModal] = useState(false);
   return (
-    <div className="my-5">
-        <Link className="py-2 px-4 text-center hover:underline mr-3" to="/rating">Rating</Link>
-        <Link className="py-2 px-4 text-center hover:underline mr-3" to="/">Random Color</Link>
-        <Link className="py-2 px-4 text-center hover:underline mr-3" to="/load">Load Data</Link>
+    <div>
+      <CiMenuFries
+        className="absolute h-10 w-10 font-bold"
+        onClick={() => setOpenModal(true)}
+      />
+      <div>
+        {openModal && (
+          <div className="bg-slate-500 text-end text-white px-5 py-6 flex flex-col absolute h-screen w-2/12 place-self-start">
+            <p onClick={() => setOpenModal(false)}>close</p>
+            <Link
+              className="py-2 px-4 text-center hover:underline "
+              to="/rating"
+            >
+              Rating
+            </Link>
+            <Link className="py-2 px-4 text-center hover:underline " to="/">
+              Random Color
+            </Link>
+            <Link className="py-2 px-4 text-center hover:underline " to="/load">
+              Load Data
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

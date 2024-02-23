@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/load",
-        element: <LoadData title="Loading data through one click"/>,
+        element: <LoadData />,
       },
     ],
   },

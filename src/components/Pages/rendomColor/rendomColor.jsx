@@ -23,8 +23,8 @@ export default function RendomColor() {
     SetRandomColor(`rgb(${R},${G},${B})`);
   }
   return (
-    <div className="h-screen py-5" style={{ background: randomColor }}>
-      <div className="w-2/4 mx-auto bg-slate-200">
+    <div>
+      <div className="flex gap-5 mx-auto">
         <button
           className="py-1 px-3 hover:underline mr-3"
           onClick={() => setColorType("rgb")}
@@ -44,7 +44,9 @@ export default function RendomColor() {
           Generate random color
         </button>
       </div>
-      <div className="text-6xl">{randomColor}</div>
+      <div className="h-screen py-5 w-full" style={{ background: randomColor }}>
+        <div className="text-6xl">{randomColor}</div>
+      </div>
     </div>
   );
 }
