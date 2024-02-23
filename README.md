@@ -16,10 +16,10 @@ You may also see any lint errors in the console.
 
 ### `Projects Name`
 
-1- Random Color Generator
-2- Star Rating
-3- Loading data through bottom button
-4- QR Code Generator
+1- Random Color Generator.\
+2- Star Rating.\
+3- Loading data through bottom button.\
+4- QR Code Generator.\
 
 ### `npm run build`
 
